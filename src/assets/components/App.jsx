@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import Header from './Header';
-import ClienteList from './ClienteList';
-import AgregarClienteForm from './AgregarClienteForm';
-import clientes from '../DataBase/clientes';
+import Encabezado from './Encabezado';
+import ListaCliente from './ListaCliente';
+import AgregarClientes from './AgregarClientes';
+import clientes from '../DataBase/datosclients';
 import 'tailwindcss/tailwind.css';
 
 function App() {
@@ -19,8 +19,8 @@ function App() {
     );
   };
 
-  const handleNuevoClienteSubmit = (nuevoCliente) => {
-    setFilteredClientes([...filteredClientes, nuevoCliente]);
+  const handleNuevoClienteSubmit = (agregarClientes) => {
+    setFilteredClientes([...filteredClientes, agregarClientes]);
   };
 
   return (
